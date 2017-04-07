@@ -1,34 +1,83 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>coddera web</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>coddera web</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../.tmp/styles/styles.css">
+  <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+</head>
+<body>
 
-  </head>
-  <body>
+<div id="layout">
+  <div id="sidebar">
+    <nav class="drawer">
+      <a class="drawer--item l-link-clean" href="#/">Inicio</a>
+      <a class="drawer--item l-link-clean" href="#/users">Usuários</a>
+      <a class="drawer--item l-link-clean" href="#/dashboard">Dashboard</a>
+    </nav>
+    <div class="overlay l-mobile-only"></div>
+  </div>
 
+  <div id="content">
+    <div class="toolbar">Coddera App</div>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
+    <div class="card l-container">
+      <h1 class="l-inline-center">Exercício de Front-End</h1>
 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+      <div class="landing">
+        <p class="landing--paragraph"><strong>Objetivo:</strong><br>
+          Criar um front-end web (funcional), single page application e responsivo, a partir da descrição informada.
+          Disponibilizar no GitHub, enviar o link para download e as instruções para utilização.</p>
+
+        <p class="landing--paragraph"><strong>Tecnologia:</strong><br>
+          Utilizar as tecnologias de sua preferencia.
+          Será necessário na entrega descrever todas as tecnologias utilizadas e o motivo da escolha por cada uma delas.
+        </p>
+
+        <p class="landing--paragraph"><strong>Descrição:</strong><br>
+          A aplicação deverá ser composta por um menu com 3 seguimentos.
+          O primeiro seguimento obrigatoriamente deverá ser um cadastro de usuários.
+          O Segundo seguimento deverá estar associado a execução de atividades de manutenção no cadastro ou um
+          sub-cadastro de funcionalidades e outras caracteristicas.
+          O terceiro seguimento obrigatoriamente deverá ser um dashboard que demonstre informações online de diversas
+          formas relacionadas a utilização dos usuários.</p>
+
+        <p class="landing--paragraph"><strong>Entrega:</strong><br>
+          Disponibilizar a aplicação funcional e com os fontes no GitHub.
+          Enviar o link para download.
+          Enviar as instruções de instalação/utilização da aplicação.</p>
+
+        <p class="landing--paragraph"><strong>O que será avaliado:</strong><br>
+          Criatividade
+          UX
+          Organização do código
+          Boas práticas</p>
+
+        <hr>
+
+        <p class="landing--footer">Developed By <strong>Martins, Thiago</strong></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/router.js"></script>
+<!-- endbuild -->
+</body>
 </html>
