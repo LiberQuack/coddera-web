@@ -1,0 +1,63 @@
+.drawer {
+  background-color: lighten($html-background-color, 5%);
+  font-size: 1.05rem;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+  width: 285px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.drawer.isVisible + .overlay {
+  @extend %overlay-is-visible;
+}
+
+.drawer--item {
+  display: flex;
+  align-items: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  &:first-child {
+    margin-top: 10px;
+  }
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.drawer--item:hover {
+  background-color: darken($html-background-color, 2%);
+}
+
+.drawer--item--icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  margin-right: 15px;
+  fill: lighten($font-color, 35%);
+}
+
+@media #{$desktop} {
+  .drawer {
+
+  }
+}
+
+@media #{$mobile} {
+  .drawer {
+    transform: translate(-100%, 0);
+    will-change: transform;
+    transition: transform $overlay-transition ease .1s;
+    height: 100vh;
+    position: fixed;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: none;
+    &.isVisible {
+      transform: translate(0, 0);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+$description-line-height: 21px;
+$description-max-height: $description-line-height * 2; /*The card-item size is based on its description*/
+
+.item {
+  display: flex;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  outline: none;
+  fill: $font-color;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &[disabled] {
+    color: darken($html-background-color, 45%);
+    background-color: darken($html-background-color, 5%);
+    border-color: darken($html-background-color, 12%);
+    .item--image {
+      opacity: .5;
+    }
+  }
+}
+
+.item-merged {
+  @extend .item;
+  margin-bottom: 0;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 !important;
+  &:first-of-type {
+    border-top: none;
+  }
+}

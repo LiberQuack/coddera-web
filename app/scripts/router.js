@@ -8,17 +8,21 @@
         loadView('/views/users.html');
         break;
 
-      case (path === '/users/new'):
-        console.log('On Users Listage');
-        break;
-
       case (/\/users\/.+/.test(path)):
-        console.log('On User X');
+        loadView('/views/users-edit.html');
         break;
 
       case (path === '/' || path === ''):
         loadView('/views/landing.html');
         break;
+
+      case (path == "/dashboard"):
+        loadView('/views/dashboard.html');
+        break;
+
+      default:
+        alert("404... Redirecionando pra HOME");
+        location.hash = "#/";
     }
   }
 

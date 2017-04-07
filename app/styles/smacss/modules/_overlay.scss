@@ -1,0 +1,18 @@
+.overlay {
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  will-change: opacity;
+  background-color: #000;
+  position: fixed;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $overlay-transition linear, pointer-events 0s linear $overlay-transition;
+
+  &.isVisible {
+    @extend %overlay-is-visible;
+  }
+}

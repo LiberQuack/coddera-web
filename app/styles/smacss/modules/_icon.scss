@@ -1,0 +1,17 @@
+$icon-transition-time: .35s;
+
+.icon--container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon--container > * {
+  flex-shrink: 0;
+}
+
+.icon--img {
+  width: 1em;
+  height: 1em;
+  fill: inherit;
+  vertical-align: middle;
+}

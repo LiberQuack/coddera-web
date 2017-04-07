@@ -1,0 +1,34 @@
+.landing {
+  margin-top: 40px;
+  font-family: monospace;
+  line-height: 1.75;
+  padding: 0 50px;
+}
+
+.landing--title {
+  text-align: center;
+}
+
+.landing--paragraph {
+  margin-bottom: 25px;
+}
+
+.landing--footer {
+  padding: 25px;
+  text-align: center;
+}
+
+@media #{$mobile} {
+  .landing {
+    padding: 0 10px;
+  }
+
+  .landing--title {
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .landing--paragraph {
+    text-align: left;
+  }
+}

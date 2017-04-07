@@ -1,0 +1,25 @@
+.e-transition {
+  transition: transform $transition-time, opacity $transition-time;
+}
+
+.e-fade {
+  @extend .e-transition;
+  opacity: 0;
+  &.isVisible,&[is-visible] {
+    @extend %e-fade-is-visible;
+  }
+}
+
+.e-from-top {
+  @extend .e-transition;
+  will-change: transform !important;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1) !important;
+  transform: translateY(-100%);
+  &[is-visible] {
+    @extend %e-from-top-is-visible;
+  }
+}
+
+.e-no-reverse:not([is-visible]) {
+  transition: none !important;
+}

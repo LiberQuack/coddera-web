@@ -1,0 +1,309 @@
+/* positions ---------------------------------------------------------------------------------------------------------*/
+.l-relative {
+  position: relative;
+}
+
+.l-absolute {
+  position: absolute;
+}
+
+/* alignments --------------------------------------------------------------------------------------------------------*/
+.l-block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-inline-center {
+  text-align: center;
+}
+
+.l-inline-right {
+  text-align: right;
+}
+
+.l-height-100 {
+  height: 100%;
+}
+
+.l-height-100vh {
+  min-height: 100vh;
+}
+
+.l-width-100 {
+  width: 100%;
+}
+
+.l-width-100vw {
+  width: 100vw;
+}
+
+/* text --------------------------------------------------------------------------------------------------------*/
+.l-text-thin {
+  font-weight: 300;
+}
+
+.l-text-normal {
+  font-weight: normal;
+}
+
+.l-text-discreet {
+  color: #a0a0a0;
+  fill: #a0a0a0;
+}
+
+.l-text-small {
+  font-size: .8rem;
+}
+
+.l-text-compress {
+  letter-spacing: -0.075ch;
+}
+
+.l-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* margin properties -------------------------------------------------------------------------------------------------*/
+.l-margin-0 {
+  margin: 0;
+}
+
+.l-margin-5 {
+  margin: 5px;
+}
+
+.l-margin-10 {
+  margin: 10px;
+}
+
+.l-margin-15 {
+  margin: 15px;
+}
+
+.l-margin-30 {
+  margin: 30px;
+}
+
+/* padding properties ------------------------------------------------------------------------------------------------*/
+.l-pad-0 {
+  padding: 0;
+}
+
+.l-pad-5 {
+  padding: 5px;
+}
+
+.l-pad-10 {
+  padding: 10px;
+}
+
+.l-pad-15 {
+  padding: 15px;
+}
+
+.l-pad-30 {
+  padding: 30px;
+}
+
+/* display properties ------------------------------------------------------------------------------------------------*/
+.l-block {
+  display: block;
+}
+
+.l-inline {
+  display: inline;
+}
+
+.l-inline-block {
+  display: inline-block;
+}
+
+/* miscellaneous -----------------------------------------------------------------------------------------------------*/
+.l-list-clean {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.l-link-clean {
+  text-decoration: none !important;
+  &:link, &:visited {
+    color: inherit;
+  }
+}
+
+.l-clickable {
+  cursor: pointer;
+}
+
+/*flex system --------------------------------------------------------------------------------------------------------*/
+.l-flex {
+  display: flex;
+}
+
+.l-flex-grow {
+  flex-grow: 1;
+}
+
+.l-flex-shrink-off {
+  flex-shrink: 0;
+}
+
+.l-flex-justify-center {
+  justify-content: center;
+}
+
+.l-flex-align-center {
+  align-items: center;
+}
+
+.l-flex-fast-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * {
+    margin: auto;
+  }
+
+}
+
+/*grid system --------------------------------------------------------------------------------------------------------*/
+.l-row {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.l-row > * {
+  font-size: 1rem;
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 1.6%;
+}
+
+.l-row > *:last-child {
+  margin-right: 0;
+}
+
+.l-12-12 {
+  width: 100%;
+}
+
+.l-11-12 {
+  width: 91.53%;
+}
+
+.l-10-12 {
+  width: 83.06%;
+}
+
+.l-9-12 {
+  width: 74.6%;
+}
+
+.l-8-12 {
+  width: 66.13%;
+}
+
+.l-7-12 {
+  width: 57.66%;
+}
+
+.l-6-12 {
+  width: 49.2%;
+}
+
+.l-5-12 {
+  width: 40.73%;
+}
+
+.l-4-12 {
+  width: 32.26%;
+}
+
+.l-3-12 {
+  width: 23.8%;
+}
+
+.l-2-12 {
+  width: 15.33%;
+}
+
+.l-1-12 {
+  width: 6.866%;
+}
+
+@media #{$mobile} {
+  .l-row > * {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* customizations ----------------------------*/
+.l-toolbar-margin {
+  padding-top: $toolbar_height;
+}
+
+.l-hide {
+  display: none;
+}
+
+.l-show {
+  display: block;
+}
+
+.l-container {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.l-no-spin {
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button,
+  .l-no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+#layout {
+  display: flex;
+  flex-flow: row;
+}
+
+#sidebar {
+  flex-shrink: 0;
+  min-height: 100vh;
+}
+
+#content {
+  $padding: 15px;
+  flex-grow: 1;
+  padding-top: $toolbar_height + $padding;
+  padding-bottom: $padding;
+  overflow: hidden;
+}
+
+@media #{$mobile} {
+  #content {
+    padding-top: $toolbar_height;
+  }
+
+  .l-mobile-hide {
+    display: none !important;
+  }
+}
+
+@media #{$desktop} {
+  .l-mobile-only {
+    display: none !important;
+  }
+}
+
