@@ -48,9 +48,3 @@ button, input[type=submit] {
 [hidden] {
   display: none !important;
 }
-
-@media #{$desktop} {
-  body {
-    overflow-y: scroll;
-  }
-}

@@ -244,6 +244,12 @@
   }
 }
 
+@media #{$desktop} {
+  .l-row + .l-row {
+    margin-top: 15px;
+  }
+}
+
 /* customizations ----------------------------*/
 .l-toolbar-margin {
   padding-top: $toolbar_height;
@@ -288,7 +294,9 @@
   flex-grow: 1;
   padding-top: $toolbar_height + $padding;
   padding-bottom: $padding;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 @media #{$mobile} {
