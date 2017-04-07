@@ -16,18 +16,19 @@
         loadView('/views/landing.html');
         break;
 
-      case (path == "/dashboard"):
-        loadView('/views/dashboard.html');
+      case (path === '/dashboard'):
+        loadView('/views/dashboard.html')
+          .then(buildCharts);
         break;
 
       default:
-        alert("404... Redirecionando pra HOME");
-        location.hash = "#/";
+        alert('404... Redirecionando pra HOME');
+        location.hash = '#/';
     }
   }
 
   function loadView(url) {
-    fetch(url)
+    return fetch(url)
       .then(res => res.text())
       .then(htmlText => document.querySelector('.js-route').innerHTML = htmlText);
   }
