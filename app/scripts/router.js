@@ -4,12 +4,8 @@
 
   function route(path) {
     switch(true) {
-      case (path === '/'):
-        loadView("/views/landing.html");
-        break;
-
       case (path === '/users'):
-        console.log('On Users Listage');
+        loadView('/views/users.html');
         break;
 
       case (path === '/users/new'):
@@ -19,13 +15,17 @@
       case (/\/users\/.+/.test(path)):
         console.log('On User X');
         break;
+
+      case (path === '/' || path === ''):
+        loadView('/views/landing.html');
+        break;
     }
   }
 
   function loadView(url) {
     fetch(url)
       .then(res => res.text())
-      .then(htmlText => document.querySelector(".js-route").innerHTML = htmlText);
+      .then(htmlText => document.querySelector('.js-route').innerHTML = htmlText);
   }
 
   //Init
