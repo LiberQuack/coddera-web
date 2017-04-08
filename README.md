@@ -11,6 +11,7 @@ A simple static front-end...
 - ♥
 
 **Why Vanilla?**
+
 Because vanilla is essential... frameworks and libraries are sugar
 
 **Run locally**
