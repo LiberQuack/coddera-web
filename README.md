@@ -5,6 +5,7 @@ A simple static front-end...
 - Vanilla JS
 - Yeoman
 - Gulp
+- Chartjs
 - Bower
 - Sass
 - SMACSS (Methodology)
