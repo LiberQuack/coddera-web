@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-.drawer.isVisible + .overlay {
+input:checked + .drawer + .overlay {
   @extend %overlay-is-visible;
 }
 
@@ -38,12 +38,6 @@
   fill: lighten($font-color, 35%);
 }
 
-@media #{$desktop} {
-  .drawer {
-
-  }
-}
-
 @media #{$mobile} {
   .drawer {
     transform: translate(-100%, 0);
@@ -56,8 +50,9 @@
     left: 0;
     z-index: 10;
     box-shadow: none;
-    &.isVisible {
-      transform: translate(0, 0);
-    }
+  }
+
+  input:checked + .drawer {
+    transform: translate(0, 0);
   }
 }
