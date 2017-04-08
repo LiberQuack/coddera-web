@@ -5,19 +5,19 @@
   function route(path) {
     switch(true) {
       case (path === '/users'):
-        loadView('/views/users.html');
+        loadView('views/users.html');
         break;
 
       case (/\/users\/.+/.test(path)):
-        loadView('/views/users-edit.html');
+        loadView('views/users-edit.html');
         break;
 
       case (path === '/' || path === ''):
-        loadView('/views/landing.html');
+        loadView('views/landing.html');
         break;
 
       case (path === '/dashboard'):
-        loadView('/views/dashboard.html')
+        loadView('views/dashboard.html')
           .then(buildCharts);
         break;
 
